@@ -9,7 +9,8 @@ PureECS アニメーション検証
 シェーダーでのアニメーションについては「[sugi-cho/Animation-Texture-Baker](https://github.com/sugi-cho/Animation-Texture-Baker)」を使わせて頂きました。  
 技術解説についてはテラシュールブログさんでも取り上げられているので詳細は「[こちら](http://tsubakit1.hateblo.jp/entry/2017/09/03/225713)」を参照。
 
-**※以下のGIFでは配管工が動いてますが、実際にプロジェクトのサンプルで動くモデルは[ローポリユニティちゃん](http://unity-chan.com/contents/news/%E3%80%90unite2016tokyo%E3%80%91%E3%83%AD%E3%83%BC%E3%83%9D%E3%83%AA%E3%83%A6%E3%83%8B%E3%83%86%E3%82%A3%E3%81%A1%E3%82%83%E3%82%93%E5%85%AC%E9%96%8B%EF%BC%81%E3%80%90livemodeling%E3%80%91/)となります。**
+**※以下のGIFでは配管工が動いてますが、実際にプロジェクトのサンプルで動くモデルは[ローポリユニティちゃん](http://unity-chan.com/contents/news/%E3%80%90unite2016tokyo%E3%80%91%E3%83%AD%E3%83%BC%E3%83%9D%E3%83%AA%E3%83%A6%E3%83%8B%E3%83%86%E3%82%A3%E3%81%A1%E3%82%83%E3%82%93%E5%85%AC%E9%96%8B%EF%BC%81%E3%80%90livemodeling%E3%80%91/)となります。**  
+
 ![sample](https://user-images.githubusercontent.com/17098415/47253650-d5136f80-d490-11e8-8af6-fdb463c1ceb5.gif)
 
 
