@@ -5,7 +5,6 @@
         _MainTex ("Texture", 2D) = "white" {}
         _PosTex("position texture", 2D) = "black"{}
         _NmlTex("normal texture", 2D) = "white"{}
-        _DT ("delta time", float) = 0
         _Length ("animation length", Float) = 1
         [Toggle(ANIM_LOOP)] _Loop("loop", Float) = 0
     }
@@ -49,7 +48,7 @@
 
             sampler2D _MainTex, _PosTex, _NmlTex;
             float4 _PosTex_TexelSize;
-            float _Length, _DT;
+            float _Length;
             StructuredBuffer<PlayData> _PlayDataBuffer;
             
             v2f vert (appdata v, uint vid : SV_VertexID, uint instanceID : SV_InstanceID)

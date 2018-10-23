@@ -278,9 +278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxObjectNum: 10000
   _animationMeshes:
-  - Mesh: {fileID: 4300000, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
-    AnimationMaterial: {fileID: 2100000, guid: 70ea5a13571ace341b6823df0a956dc6, type: 2}
-  - Mesh: {fileID: 4300000, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
-    AnimationMaterial: {fileID: 2100000, guid: 5d1cfe88804772c47b072c1a2bf19d20, type: 2}
-  - Mesh: {fileID: 4300000, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
-    AnimationMaterial: {fileID: 2100000, guid: 17af5e1ed7febdd4995ae4fe2778c747, type: 2}
+  - Mesh: {fileID: 4300000, guid: 97cd899cd9369b2468f25810d390aed0, type: 3}
+    AnimationMaterial: {fileID: 2100000, guid: 94e43f623b6e336499be6920c834942b, type: 2}
+  - Mesh: {fileID: 4300000, guid: 97cd899cd9369b2468f25810d390aed0, type: 3}
+    AnimationMaterial: {fileID: 2100000, guid: 90b3682938523514ba654f4725ddb2f9, type: 2}
+  - Mesh: {fileID: 4300000, guid: 97cd899cd9369b2468f25810d390aed0, type: 3}
+    AnimationMaterial: {fileID: 2100000, guid: 0c5254e68d73b6a4a98b4f82f96f3607, type: 2}

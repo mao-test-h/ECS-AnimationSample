@@ -49,9 +49,9 @@
         /// </summary>
         public enum AnimationType
         {
-            Idle = 0,
-            Walk,
-            Run,
+            Run = 0,
+            Slide,
+            Wait,
         }
 
         /// <summary>
