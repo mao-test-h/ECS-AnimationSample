@@ -41,7 +41,7 @@
         /// </summary>
         void Start()
         {
-            World.Active = new World("Dokaben World");
+            World.Active = new World("Sample World");
             var entityManager = World.Active.CreateManager<EntityManager>();
             World.Active.CreateManager(typeof(EndFrameTransformSystem));
             World.Active.CreateManager(typeof(AnimationInstancingSystem), new AnimationInstancingSystem.Parameter { AnimationMeshes = this._animationMeshes });
