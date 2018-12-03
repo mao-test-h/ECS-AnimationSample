@@ -40,23 +40,26 @@
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
-            struct PlayData
+            // アニメーションの再生情報
+            struct playData
             {
-                float CurrentKeyFrame;
-                float4x4 LocalToWorld;
+                // 現在の再生キーフレーム
+                float currentKeyFrame;
+                // モデル変換行列
+                float4x4 localToWorld;
             };
 
             sampler2D _MainTex, _PosTex, _NmlTex;
             float4 _PosTex_TexelSize;
             float _Length;
-            StructuredBuffer<PlayData> _PlayDataBuffer;
+            StructuredBuffer<playData> _PlayDataBuffer;
             
             v2f vert (appdata v, uint vid : SV_VertexID, uint instanceID : SV_InstanceID)
             {
                 UNITY_SETUP_INSTANCE_ID(v);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-                float t = _PlayDataBuffer[instanceID].CurrentKeyFrame / _Length;
+                float t = _PlayDataBuffer[instanceID].currentKeyFrame / _Length;
 #if ANIM_LOOP
                 t = fmod(t, 1.0);
 #else
@@ -68,15 +71,15 @@
                 float3 normal = tex2Dlod(_NmlTex, float4(x, y, 0, 0));
 
                 v2f o;
-                o.vertex = UnityObjectToClipPos(mul(_PlayDataBuffer[instanceID].LocalToWorld, pos));
-                o.normal = UnityObjectToWorldNormal(mul(_PlayDataBuffer[instanceID].LocalToWorld, normal));
+                o.vertex = UnityObjectToClipPos(mul(_PlayDataBuffer[instanceID].localToWorld, pos));
+                o.normal = UnityObjectToWorldNormal(mul(_PlayDataBuffer[instanceID].localToWorld, normal));
                 o.uv = v.uv;
                 return o;
             }
             
             half4 frag (v2f i) : SV_Target
             {
-                half diff = dot(i.normal, float3(0,1,0))*0.5 + 0.5;
+                half diff = dot(i.normal, float3(0, 1, 0)) * 0.5 + 0.5;
                 half4 col = tex2D(_MainTex, i.uv);
                 return diff * col;
             }
