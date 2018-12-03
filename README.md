@@ -1,8 +1,8 @@
 # ECS-AnimationSample
 PureECS アニメーション検証
 
-- Unity2018.3.0b6
-- Entities 0.0.12-preview.19
+- Unity2018.3.0b12
+- Entities 0.0.12-preview.21
 
 内容を簡単に説明すると、GPU Instancingで描画されるモデルを頂点シェーダーでTextureに書き込まれたアニメーションデータを参照する形で動かし、それに伴うアニメーションの振り分けや再生キーフレームの管理などをECSで対応すると言ったサンプル。
 
