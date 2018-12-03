@@ -371,8 +371,11 @@ namespace MainContents.ECS
                 }
 
                 // 再生情報の設定
-                // HACK: もうちょっと効率的なやり方がありそう感
-                computeBuffers.SendPlayBuffer.SetData(buffer.Slice(0, instanceCount).ToArray());
+                var bufferSlice = buffer.Slice(0, instanceCount);
+                var copyArray = new NativeArray<SendPlayData>(bufferSlice.Length, Allocator.Temp);
+                bufferSlice.CopyTo(copyArray);
+                // ※ComputeBufferにはNativeArrayを渡すことが可能。(内部的にもポインタ渡ししていた覚え)
+                computeBuffers.SendPlayBuffer.SetData(copyArray);
                 renderer.AnimationMaterial.SetBuffer(this._playDataBufferID, computeBuffers.SendPlayBuffer);
 
                 // 「Graphics.DrawMeshInstancedIndirect -> bufferWithArgs」の設定
@@ -391,6 +394,7 @@ namespace MainContents.ECS
                     computeBuffers.GPUInstancingArgsBuffer);
 
                 buffer.Dispose();
+                copyArray.Dispose();
             }
             playDataMap.Dispose();
             return handle;
